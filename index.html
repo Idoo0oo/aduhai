@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GadingPro - Home</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Tambahkan Font Awesome untuk ikon sosial media -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Custom Inline CSS untuk navbar -->
+  <style>
+    .nav-item {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .nav-item:hover {
+      color: #1d4ed8; /* Blue-700 */
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-700">
+  <!-- Header & Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg transition-all duration-300">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <!-- Logo dan Brand Name -->
+  <div class="flex items-center">
+    <img src="img/Gading-Pro-Logo.png" alt="Logo" class="h-10 mr-2" />
+    <a href="index.html" class="text-2xl font-bold text-blue-600"></a>
+  </div>
+  
+  <!-- Mobile Menu Toggle -->
+  <div class="block lg:hidden">
+    <button id="nav-toggle" class="focus:outline-none text-2xl">
+      <i class="fas fa-bars"></i> <!-- Ikon Font Awesome -->
+    </button>
+  </div>
+
+  <!-- Navbar Items -->
+  <div class="flex-grow flex justify-center">
+    <ul id="nav-content" class="hidden lg:flex lg:items-center space-x-6">
+      <li><a href="index.html" class="nav-item">Home</a></li>
+      <li><a href="about.html" class="nav-item">About</a></li>
+      
+      <!-- Dropdown untuk Project -->
+      <li class="relative group">
+        <a href="project.html" class="nav-item flex items-center">
+          Project
+          <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <ul class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="residential.html" class="block">Residential</a></li>
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="commercial.html" class="block">Commercial</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown untuk Location -->
+      <li class="relative group">
+        <a href="location.html" class="nav-item flex items-center">
+          Location
+          <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <ul class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="location.html#jakarta" class="block">Jakarta</a></li>
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="location.html#bandung" class="block">Bandung</a></li>
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="location.html#surabaya" class="block">Surabaya</a></li>
+          <li class="px-4 py-2 hover:bg-blue-100"><a href="location.html#bali" class="block">Bali</a></li>
+        </ul>
+      </li>
+
+      <li><a href="get-brosure.html" class="nav-item">Get Brosure</a></li>
+    </ul>
+  </div>
+
+  <!-- Contact Button -->
+  <div>
+    <a href="contact.html" class="nav-btn">Contact ➝</a>
+  </div>
+</nav>
+  </header>
+
+  <!-- Banner Section dengan Overlay Search Bar -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image: url('img/banner-rumah.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex flex-col justify-center items-center h-full container mx-auto px-4 text-center">
+      <h1 class="text-white text-4xl md:text-6xl font-bold mb-4" data-aos="fade-down">
+        Temukan Properti Impian Anda
+      </h1>
+      <p class="text-white text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
+        Berbagai pilihan properti residensial dan komersial terbaik di Indonesia
+      </p>
+      <!-- Search Bar dengan Dropdown -->
+      <div class="bg-white bg-opacity-90 rounded-lg p-6 shadow-lg max-w-4xl w-full" data-aos="zoom-in" data-aos-delay="400">
+        <form action="#" method="GET" class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+          <!-- Dropdown: Property Type -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <label class="uppercase text-xs tracking-wider mb-1">Property Type</label>
+            <select class="border rounded p-2 w-full">
+              <option disabled selected>Select Property Type</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+          <!-- Dropdown: Location -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <label class="uppercase text-xs tracking-wider mb-1">Location</label>
+            <select class="border rounded p-2 w-full">
+              <option disabled selected>e.g. Gading Serpong</option>
+              <option>Jakarta</option>
+              <option>Bandung</option>
+              <option>Surabaya</option>
+              <option>Bali</option>
+            </select>
+          </div>
+          <!-- Dropdown: Price Range -->
+          <div class="flex flex-col w-full md:w-1/3">
+            <label class="uppercase text-xs tracking-wider mb-1">Price Range</label>
+            <select class="border rounded p-2 w-full">
+              <option disabled selected>Min. Price - Max. Price</option>
+              <option>100jt - 500jt</option>
+              <option>500jt - 1M</option>
+              <option>1M - 5M</option>
+              <option>5M+</option>
+            </select>
+          </div>
+          <!-- Tombol Search -->
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition mt-4 md:mt-0">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Residential Primary -->
+  <section id="residential-primary" class="container mx-auto px-4 py-16" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Residential Primary</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Contoh Card Properti -->
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/rumah.jpg" alt="Rumah Impian" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Rumah Impian</h4>
+          <p class="mt-2 text-sm">Hunian terbaik dengan desain modern.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/rumah.jpg" alt="Cluster Eksklusif" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Cluster Eksklusif</h4>
+          <p class="mt-2 text-sm">Lingkungan nyaman dan aman untuk keluarga.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/rumah.jpg" alt="Home Modern" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Home Modern</h4>
+          <p class="mt-2 text-sm">Desain minimalis dengan sentuhan elegan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Commercial Primary -->
+  <section id="commercial-primary" class="container mx-auto px-4 py-16 bg-gray-50" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Commercial Primary</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Contoh Card Properti -->
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/kantor.jpg" alt="Gedung Perkantoran" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Gedung Perkantoran</h4>
+          <p class="mt-2 text-sm">Lokasi strategis di pusat kota.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/kantor.jpg" alt="Pusat Perbelanjaan" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Pusat Perbelanjaan</h4>
+          <p class="mt-2 text-sm">Ritel modern dengan konsep inovatif.</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-lg rounded overflow-hidden">
+        <img src="img/kantor.jpg" alt="Office Suites" class="w-full" />
+        <div class="p-4">
+          <h4 class="font-bold">Office Suites</h4>
+          <p class="mt-2 text-sm">Ruang kantor lengkap dengan fasilitas premium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Layanan Kami (Our Services) -->
+  <section id="our-services" class="container mx-auto px-4 py-16" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Layanan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white shadow-lg rounded p-6 text-center">
+        <h4 class="text-xl font-bold mb-2">Daftar Properti</h4>
+        <p class="text-sm">Temukan pilihan properti terbaik sesuai kebutuhan Anda.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded p-6 text-center">
+        <h4 class="text-xl font-bold mb-2">Konsultasi Gratis</h4>
+        <p class="text-sm">Dapatkan saran langsung dari ahli properti kami.</p>
+      </div>
+      <div class="bg-white shadow-lg rounded p-6 text-center">
+        <h4 class="text-xl font-bold mb-2">Pendanaan</h4>
+        <p class="text-sm">Solusi pembiayaan yang membantu mewujudkan impian Anda.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured-properties" class="container mx-auto px-6 py-16 bg-gray-50">
+  <h2 class="text-3xl font-bold text-center mb-8">Properti Unggulan</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="img/rumah.jpg" alt="Properti 1" class="w-full">
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">Rumah Mewah</h3>
+        <p class="text-gray-600">Harga: Rp 1,5 M | Lokasi: Gading Serpong</p>
+      </div>
+    </div>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <img src="img/kantor.jpg" alt="Properti 2" class="w-full">
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">Gedung Perkantoran</h3>
+        <p class="text-gray-600">Harga: Rp 2 M | Lokasi: Jakarta Selatan</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="map-section" class="container mx-auto px-6 py-16">
+  <h2 class="text-3xl font-bold text-center mb-8">Lokasi Properti</h2>
+  <div class="rounded-lg overflow-hidden shadow-lg relative" id="map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1940955377263!2d106.6319972!3d-6.238129400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb9bbe4644eb%3A0x105deb59d34505e5!2sGadingPro%20Gading%20Serpong!5e0!3m2!1sid!2sid!4v1747637326340!5m2!1sid!2sid" 
+      width="100%" 
+      height="400px" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-blue-500 font-semibold">Hear from our happy clients</p>
+      <h2 class="text-4xl font-bold">What Our Clients Are Saying</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Testimoni 1 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Jamie Parker</h4>
+            <p class="text-gray-500 text-sm">Dream Homes</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“Their expertise made finding the perfect property a joy. Highly recommend!”</p>
+        <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Jordan Kim</h4>
+            <p class="text-gray-500 text-sm">City Dwellings</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“Top-notch service that made everything easy and stress-free.”</p>
+         <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Morgan Blake</h4>
+            <p class="text-gray-500 text-sm">Comfort Living</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“A smooth journey from start to finish. Truly professional!”</p>
+        <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+
+      <!-- Testimoni 4 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Taylor Quinn</h4>
+            <p class="text-gray-500 text-sm">Luxury Estates</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“They exceeded our expectations with exceptional service!”</p>
+        <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+
+      <!-- Testimoni 5 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Casey Morgan</h4>
+            <p class="text-gray-500 text-sm">Elite Properties</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“Their personal touch and attention to detail were outstanding.”</p>
+        <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+
+      <!-- Testimoni 6 -->
+      <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition-shadow" data-aos="fade-up" data-aos-delay="500">
+        <div class="flex items-center mb-4">
+          <img src="img/foto-marketing.png" alt="Avatar" class="rounded-full w-16 h-16">
+          <div class="ml-3">
+            <h4 class="font-bold">Riley Jordan</h4>
+            <p class="text-gray-500 text-sm">Premium Spaces</p>
+          </div>
+        </div>
+        <p class="italic text-gray-700">“A fantastic team that made our property search enjoyable and successful.”</p>
+        <img src="img/rumah.jpg" alt="Testimonial Image" class="mt-4 rounded-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-12">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+    <!-- Brand & About -->
+    <div>
+      <img src="img/Gading-Pro-Logo.png" alt="GadingPro" class="h-12 mb-3">
+      <p class="text-sm text-gray-400 leading-relaxed">
+        Menyediakan properti terbaik dengan desain inovatif, lokasi strategis, dan layanan profesional. Temukan hunian impian dan investasi masa depan bersama kami.
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4 mt-6">
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-bold mb-3">Quick Links</h4>
+      <ul class="text-sm text-gray-400 space-y-2">
+        <li><a href="index.html" class="hover:text-blue-400 transition">🏡 Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-400 transition">📜 About Us</a></li>
+        <li><a href="project.html" class="hover:text-blue-400 transition">🏢 Projects</a></li>
+        <li><a href="location.html" class="hover:text-blue-400 transition">📍 Location</a></li>
+        <li><a href="contact.html" class="hover:text-blue-400 transition">📞 Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Featured Services -->
+    <div>
+      <h4 class="text-lg font-bold mb-3">Layanan Kami</h4>
+      <ul class="text-sm text-gray-400 space-y-2">
+        <li>✅ Properti Residensial Eksklusif</li>
+        <li>✅ Investasi Real Estate</li>
+        <li>✅ Ruang Komersial & Bisnis</li>
+        <li>✅ Konsultasi & Pembiayaan</li>
+        <li>✅ Teknologi Smart Home</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h4 class="text-lg font-bold mt-6 mb-3">Berlangganan Newsletter</h4>
+      <form class="flex">
+        <input type="email" class="p-2 rounded-l bg-gray-800 text-white placeholder-gray-400" placeholder="Masukkan email...">
+        <button class="bg-blue-600 hover:bg-blue-700 p-2 rounded-r text-white">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="mt-8 text-center text-sm text-gray-500 border-t border-gray-700 pt-4">
+    &copy; 2025 GadingPro. All rights reserved. | <a href="#" class="hover:text-blue-500">Privacy Policy</a> | <a href="#" class="hover:text-blue-500">Terms & Conditions</a>
+  </div>
+</footer>
+
+  <!-- Scripts: AOS & Navbar Scroll Behavior -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+    
+    let lastScroll = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScroll) {
+        // Jika scroll ke bawah, navbar menjadi transparan
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-white', 'shadow-lg');
+      } else {
+        // Jika scroll ke atas, navbar kembali dengan background putih dan shadow
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-white', 'shadow-lg');
+      }
+      lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+     document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      // Animasi scroll dengan delay
+  AOS.init({ duration: 1000 });
+
+  // Slider Properti
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".property-slide");
+    
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    document.getElementById("next-slide").addEventListener("click", function() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById("prev-slide").addEventListener("click", function() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    });
+
+    showSlide(currentIndex);
+  });
+
+  // Interaktif Peta Properti
+  function updateMap(lat, lng) {
+    document.getElementById("map").innerHTML = `
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${lat},${lng}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    `;
+  }
+
+  // Event Listener untuk lokasi properti
+  document.querySelectorAll(".location-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const lat = card.dataset.lat;
+      const lng = card.dataset.lng;
+      updateMap(lat, lng);
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const logo = navbar.querySelector("img");
+  const navToggle = document.getElementById("nav-toggle");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("bg-transparent"); // Menghilangkan background
+      logo.classList.add("fixed", "left-4", "top-4"); // Menetapkan logo di kiri atas saat scroll
+      navToggle.classList.add("fixed", "right-4", "top-4"); // Menetapkan ikon garis tiga di kanan atas saat scroll
+    } else {
+      navbar.classList.remove("bg-transparent");
+      logo.classList.remove("fixed", "left-4", "top-4");
+      navToggle.classList.remove("fixed", "right-4", "top-4");
+    }
+  });
+});
+
+  document.querySelectorAll(".group").forEach(group => {
+  group.addEventListener("mouseenter", () => {
+    let dropdown = group.querySelector("ul");
+    dropdown.classList.remove("hidden");
+  });
+
+  group.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      let dropdown = group.querySelector("ul");
+      dropdown.classList.add("hidden");
+    }, 300); // Delay agar user punya waktu memilih sebelum tertutup
+  });
+});
+  </script>
+</body>
+</html>

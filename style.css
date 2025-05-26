@@ -1,0 +1,237 @@
+/* style.css: Custom styles untuk melengkapi Tailwind */
+
+:root{
+  --primary-color: #ea9a4a;
+}
+
+/* Animasi transisi untuk link di navbar */
+header nav ul li a {
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #2563EB; /* Tailwind blue-600 */
+}
+
+/* Pastikan dropdown (jika digunakan) ditampilkan di atas konten lainnya */
+header nav ul li ul {
+  z-index: 50;
+}
+
+#nav-toggle i {
+  display: block;
+  color: #000; /* Pastikan ikon muncul di mobile */
+}
+
+@media (min-width: 1024px) { /* Sembunyikan hanya di layar besar */
+  #nav-toggle {
+    display: none;
+  }
+}
+
+/* Animasi underline untuk navbar item */
+.nav-item {
+  position: relative;
+  padding-bottom: 4px; /* Beri sedikit ruang di bawah teks */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Pseudo-element untuk garis bawah */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color); /* Warna biru */
+  transform: scaleX(0); /* Mulai dengan garis tidak terlihat */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek muncul garis saat hover */
+.nav-item:hover::after {
+  transform: scaleX(1); /* Garis muncul */
+}
+
+/* Navbar item hover efek */
+.nav-item:hover {
+  color: var(--primary-color);
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Timeline Line */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #1d4ed8;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+/* Left Timeline */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+/* Right Timeline */
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Timeline Content */
+.timeline-content {
+  position: relative;
+  background: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bulatan di tengah */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #1d4ed8;
+  border-radius: 50%;
+  top: 20px;
+  left: 48%;
+}
+
+/* Animasi dan efek hover */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input dengan efek fokus */
+input, select, textarea {
+  transition: all 0.3s ease;
+  border: 2px solid #ddd;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 8px rgba(29, 78, 216, 0.3);
+}
+
+/* Animasi scroll */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Custom button */
+.btn-custom {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn-custom:hover {
+  background-color: #143a8c;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d3a425 !important;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: white !important;
+  color: #25D366 !important;
+  border: 2px solid #25D366 !important;
+  transform: scale(1.05); /* Perbesar sedikit */
+}
+
+.nav-btn:active {
+  transform: scale(0.95); /* Efek kecil saat diklik */
+}
+
+.faq-btn {
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-btn:hover {
+  color: #2563eb;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-content {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-in-out;
+}
+
+.faq-content.active {
+  display: block;
+  max-height: 200px; /* Sesuaikan dengan panjang konten */
+  opacity: 1;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.left-4 {
+  left: 1rem; /* Menetapkan posisi kiri */
+}
+
+.right-4 {
+  right: 1rem; /* Menetapkan posisi kanan */
+}
+
+.top-4 {
+  top: 1rem; /* Menetapkan posisi atas */
+}
+
+/* Tambahan media query untuk perangkat mobile (opsional) */
+@media (max-width: 1024px) {
+  /* Tambahkan style khusus untuk resolusi kecil */
+}

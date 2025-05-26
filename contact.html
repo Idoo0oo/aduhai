@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GadingPro - Contact</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700">
+  
+  <!-- Header & Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg transition-all duration-300">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo dan Brand Name -->
+      <div class="flex items-center">
+        <img src="img/Gading-Pro-Logo.png" alt="Logo" class="h-10 mr-2" />
+        <a href="index.html" class="text-2xl font-bold text-blue-600"></a>
+      </div>
+      <!-- Mobile Menu Toggle -->
+      <div class="block lg:hidden">
+        <button id="nav-toggle" class="focus:outline-none">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4 5h16M4 12h16M4 19h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Navbar Items -->
+      <ul id="nav-content" class="w-full hidden lg:flex lg:items-center lg:w-auto">
+        <li class="mx-3 my-2 lg:my-0">
+          <a href="index.html" class="nav-item">Home</a>
+        </li>
+        <li class="mx-3 my-2 lg:my-0">
+          <a href="about.html" class="nav-item">About</a>
+        </li>
+        <!-- Dropdown untuk Project -->
+        <li class="mx-3 my-2 lg:my-0 relative group">
+          <a href="project.html" class="nav-item flex items-center">
+            Project
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <ul class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="residential.html" class="block">Residential</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="commercial.html" class="block">Commercial</a>
+            </li>
+          </ul>
+        </li>
+        <!-- Dropdown untuk Location -->
+        <li class="mx-3 my-2 lg:my-0 relative group">
+          <a href="location.html" class="nav-item flex items-center">
+            Location
+            <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <ul class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="location.html#jakarta" class="block">Jakarta</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="location.html#bandung" class="block">Bandung</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="location.html#surabaya" class="block">Surabaya</a>
+            </li>
+            <li class="px-4 py-2 hover:bg-blue-100">
+              <a href="location.html#bali" class="block">Bali</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mx-3 my-2 lg:my-0">
+          <a href="get-brosure.html" class="nav-item">Get Brosure</a>
+        </li>
+        <li class="mx-3 my-2 lg:my-0">
+          <a href="contact.html" class="nav-btn">Contact ➝</a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto px-6 py-20 mt-16">
+    <h1 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Hubungi Kami</h1>
+    <p class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">Silakan hubungi kami untuk informasi lebih lanjut tentang properti dan layanan kami.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <div class="bg-white shadow-lg rounded-xl p-6" data-aos="fade-right">
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium mb-2">Nama</label>
+            <input type="text" id="name" class="w-full p-2 border rounded" placeholder="Nama Anda">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" id="email" class="w-full p-2 border rounded" placeholder="Email Anda">
+          </div>
+          <div class="mb-4">
+            <label for="phone" class="block text-sm font-medium mb-2">No. Telepon</label>
+            <input type="text" id="phone" class="w-full p-2 border rounded" placeholder="Nomor Telepon">
+          </div>
+          <div class="mb-4">
+            <label for="subject" class="block text-sm font-medium mb-2">Subjek</label>
+            <input type="text" id="subject" class="w-full p-2 border rounded" placeholder="Subjek Pesan">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium mb-2">Pesan</label>
+            <textarea id="message" class="w-full p-2 border rounded" rows="4" placeholder="Tulis pesan Anda"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded text-white transition w-full">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg relative" id="map" data-aos="fade-left">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1940955377263!2d106.6319972!3d-6.238129400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb9bbe4644eb%3A0x105deb59d34505e5!2sGadingPro%20Gading%20Serpong!5e0!3m2!1sid!2sid!4v1747637326340!5m2!1sid!2sid" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="absolute inset-0">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-12">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+    <!-- Brand & About -->
+    <div>
+      <img src="logo.png" alt="GadingPro" class="h-12 mb-3">
+      <p class="text-sm text-gray-400 leading-relaxed">
+        Menyediakan properti terbaik dengan desain inovatif, lokasi strategis, dan layanan profesional. Temukan hunian impian dan investasi masa depan bersama kami.
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4 mt-6">
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-bold mb-3">Quick Links</h4>
+      <ul class="text-sm text-gray-400 space-y-2">
+        <li><a href="index.html" class="hover:text-blue-400 transition">🏡 Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-400 transition">📜 About Us</a></li>
+        <li><a href="project.html" class="hover:text-blue-400 transition">🏢 Projects</a></li>
+        <li><a href="location.html" class="hover:text-blue-400 transition">📍 Location</a></li>
+        <li><a href="contact.html" class="hover:text-blue-400 transition">📞 Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Featured Services -->
+    <div>
+      <h4 class="text-lg font-bold mb-3">Layanan Kami</h4>
+      <ul class="text-sm text-gray-400 space-y-2">
+        <li>✅ Properti Residensial Eksklusif</li>
+        <li>✅ Investasi Real Estate</li>
+        <li>✅ Ruang Komersial & Bisnis</li>
+        <li>✅ Konsultasi & Pembiayaan</li>
+        <li>✅ Teknologi Smart Home</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h4 class="text-lg font-bold mt-6 mb-3">Berlangganan Newsletter</h4>
+      <form class="flex">
+        <input type="email" class="p-2 rounded-l bg-gray-800 text-white placeholder-gray-400" placeholder="Masukkan email...">
+        <button class="bg-blue-600 hover:bg-blue-700 p-2 rounded-r text-white">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="mt-8 text-center text-sm text-gray-500 border-t border-gray-700 pt-4">
+    &copy; 2025 GadingPro. All rights reserved. | <a href="#" class="hover:text-blue-500">Privacy Policy</a> | <a href="#" class="hover:text-blue-500">Terms & Conditions</a>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init({ duration: 1000 });
+    document.getElementById("nav-toggle").addEventListener("click", function() {
+      document.getElementById("nav-content").classList.toggle("hidden");
+    });
+
+    AOS.init({ duration: 1000 });
+    
+    let lastScroll = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScroll) {
+        // Jika scroll ke bawah, navbar menjadi transparan
+        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('bg-white', 'shadow-lg');
+      } else {
+        // Jika scroll ke atas, navbar kembali dengan background putih dan shadow
+        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('bg-white', 'shadow-lg');
+      }
+      lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+    document.getElementById("nav-toggle").addEventListener("click", function () {
+      document.getElementById("nav-content").classList.toggle("hidden");
+    });
+    </script>
+</body>
+</html>
