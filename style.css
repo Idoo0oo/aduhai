@@ -161,7 +161,7 @@ input:focus, select:focus, textarea:focus {
 .nav-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #d3a425 !important;
+  background-color: #ea9a4a !important;
   color: white !important;
   font-weight: bold;
   text-decoration: none;
@@ -172,8 +172,8 @@ input:focus, select:focus, textarea:focus {
 
 .nav-btn:hover {
   background-color: white !important;
-  color: #25D366 !important;
-  border: 2px solid #25D366 !important;
+  color: #ea9a4a !important;
+  border: 2px solid #ea9a4a !important;
   transform: scale(1.05); /* Perbesar sedikit */
 }
 
